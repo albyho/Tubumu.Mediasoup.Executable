@@ -3,18 +3,16 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <PackageId>Tubumu.Mediasoup.Executable</PackageId>
-    <Version>1.0.5</Version>
+    <Version>1.0.9</Version>
     <Authors>Alby</Authors>
     <Company>Tubumu</Company>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="runtimes\win\native\mediasoup-worker.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="runtimes\osx\native\mediasoup-worker">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Include="runtimes\**\native\*">
+        <Pack>true</Pack>
+        <PackageCopyToOutput>true</PackageCopyToOutput>
     </None>
   </ItemGroup>
 
