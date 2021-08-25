@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
 
     <PackageId>Tubumu.Mediasoup.Executable</PackageId>
-    <Version>3.1.0</Version>
+    <Version>3.2.0</Version>
     <Authors>Alby</Authors>
     <Company>Tubumu</Company>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -20,13 +20,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="runtimes\**\native\*">
-        <Pack>true</Pack>
+    <None Include="runtimes\win\native\*" Pack="true" PackagePath="runtimes\win\native">
         <PackageCopyToOutput>true</PackageCopyToOutput>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="runtimes\osx\native\*" Pack="true" PackagePath="runtimes\osx\native">
+        <PackageCopyToOutput>true</PackageCopyToOutput>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-      <None Include="README.md" Pack="true" PackagePath="\"/>
+      <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>
