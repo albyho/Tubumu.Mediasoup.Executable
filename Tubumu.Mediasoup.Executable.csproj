@@ -5,9 +5,10 @@
     <Nullable>enable</Nullable>
 
     <PackageId>Tubumu.Mediasoup.Executable</PackageId>
-    <Version>3.0.0</Version>
+    <Version>3.1.0</Version>
     <Authors>Alby</Authors>
     <Company>Tubumu</Company>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
 
     <RepositoryUrl>https://github.com/albyho/Tubumu.Mediasoup.Executable</RepositoryUrl> 
     <RepositoryType>git</RepositoryType>
@@ -22,4 +23,7 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+      <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 </Project>
